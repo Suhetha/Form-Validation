@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Log in</title>
+<link rel="stylesheet" href="log.css">
+</head>
+<body>
+<h1>Research Paper Conference</h1>
+<h4>Qatar</h4>
+<h2><center>Log In</center></h2>
+<form name="myForm"
+action="/action_page.php"
+onsubmit="return validationForm()"
+method="post">
+<table align="center" cellpadding="11">
+<center><img src="ba.jpg" width="300" height="200"></center><br>
+<tr>
+<td>Name:</td>
+<td><input type="text" name="name" id="name" min="3" maxlength="30"/> 
+</td>
+</tr>
+ <tr><td>
+  Email</td>
+  <td><input type="text" name="mail" id="mail" min="5" max="25"/></td></tr>
+  <tr><td>Password</td><td>
+  <input type="password" name="password" id="password"
+         required min="1" max="8"/> <br><br>
+	<center>	 <input type="submit" value="Submit"></center>
+<script>
+
+window.addEventListener("DOMContentLoaded", function(){
+  var name = document.getElementById("name");
+  name.addEventListener("input", function(){
+    if (name.validity.tooLong || name.validity.tooShort || name.validity.valueMissing) {
+      name.setCustomValidity("Name must be 2-8 characters.");
+      name.reportValidity();
+    } else {
+      name.setCustomValidity("");
+    }
+  });
+   </script>
+    </form>
+  </body>
+  </html>
+  
+CSS
+
+body{
+background-color:lavender;
+}
+h1{
+font-family:saniserif;
+font-size:45px;
+font-weight:bold;
+color:RED;
+text-align:center;
+}
+h2{
+font-family:serif;
+font-size:38px;
+color:black;
+}
+h4{
+font-color:blue;
+font-size:28px;
+text-align:center;
+}
